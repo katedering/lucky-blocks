@@ -3,12 +3,12 @@
 / Unlucky Potion
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=splash_potion,tag=(Potion=empty)),impact=["group(type=effect,ID=#randList(2,4,9,15,17,18,19,20,27,31),range=4,amplifier=#rand(0,5),duration=#rand(100,300);type=particle,ID=splashpotion,damage=16253176)"])@luck=2@chance=0.5
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=lingering_potion,tag=(Potion=empty)),impact=["group(type=effect,ID=#randList(2,4,9,15,17,18,19,20,27,31),range=4,amplifier=#rand(0,5),duration=#rand(100,300);type=particle,ID=splashpotion,damage=16253176)"])@luck=2@chance=0.5
+/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=splash_potion,tag=(Potion=#randList(poison,weakness,slowness,harming))),impact=["group(type=effect,ID=#randList(19,18,2,7),range=4,amplifier=#rand(0,2),duration=30;type=particle,ID=splashpotion,potion=#randList(poison,weakness,slowness,harming))"]),amount=#rand(7,10)@luck=2
 
-type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=splash_potion,tag=(Potion=#randList(poison,weakness,slowness,harming))),impact=["group(type=effect,ID=#randList(19,18,2,7),range=4,amplifier=#rand(0,2),duration=30;type=particle,ID=splashpotion,potion=#randList(poison,weakness,slowness,harming))"]),amount=#rand(7,10)@luck=2
-
+/ Swords
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=iron_sword),damage=10.0)@luck=2
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=diamond_sword),damage=20.0)@chance=0.2@luck=2
-/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lucky:omega_lucky_sword),damage=150.0)@chance=0.05@luck=2
+type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lucky:omega_lucky_sword),damage=150.0)@chance=0.05@luck=2
 
 / ------ Neutral Drops ------
 
