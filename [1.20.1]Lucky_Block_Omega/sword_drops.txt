@@ -11,7 +11,7 @@ group(type=effect,ID=wither,target=hitEntity,amplifier=3,duration=100;@chance=0.
 type=entity,ID=lucky:lucky_projectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw,#pPitch,1.5),item=(id=cobweb,Count=1),impact=["type=fill, ID=cobweb,size = (1,1,1)"])@luck=1@chance=0.5
 
 / Knockback
-group(type=effect,ID=special_knockback,range=6,excludePlayer=true,power=1.8,pos=#pPos,delay=0.1;type=particle,ID=explode,size=(1.0,0.3,1.0),particleAmount=500,pos=#pExactPos)@luck=1
+group(type=effect,ID=special_knockback,range=6,excludePlayer=true,power=1.8,pos=#pPos,delay=0.1;type=particle,ID=poof,size=(1.0,0.3,1.0),particleAmount=500,pos=#pExactPos)@luck=1
 
 / ------ Destructive Effects ------
 
