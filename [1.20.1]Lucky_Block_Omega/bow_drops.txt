@@ -8,7 +8,7 @@
 / Swords
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=iron_sword),damage=10.0)@luck=2
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=diamond_sword),damage=20.0)@chance=0.2@luck=2
-type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lucky:omega_lucky_sword),damage=150.0)@chance=0.05@luck=2
+/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lucky:omega_lucky_sword),damage=150.0)@chance=0.05@luck=2
 
 / ------ Neutral Drops ------
 
@@ -16,15 +16,15 @@ type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item
 /group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=arrow,pos=#bowPos,NBTTag=(Motion=#bowMotion),amount=30,delay=#rand(0.0,3.0))@luck=1
 
 / Knockback
-/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=feather),impact=["group(type=effect,ID=special_knockback,power=2.5,range=4,delay=0.1;type=particle,ID=explode,size=(1.5,1.0,1.5),particleAmount=500)"])@luck=2@chance=3
+/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=feather),impact=["group(type=effect,ID=special_knockback,power=2.5,range=4,delay=0.1;type=particle,ID=poof,size=(1.5,1.0,1.5),particleAmount=500)"])@luck=2@chance=3
 
 / Fireworks
-/type=entity,ID=fireworks_rocket,pos=#bowPos,NBTTag=(Motion=#bowMotion,LifeTime=#rand(10,20),FireworksItem=(id=fireworks,Count=1,tag=(Fireworks=(Explosions=[(Type=2,Flicker=1,Trail=1,Colors=[I;65535],FadeColors=[I;16777215])]))))@chance=0.7@luck=1
+/type=entity,ID=minecraft:firework_rocket,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),LifeTime=#rand(10,20),FireworksItem=(id=minecraft:firework_rocket,Count=1,tag=(Fireworks=(Explosions=[(Type=2,Flicker=1,Trail=1,Colors=[I;65535],FadeColors=[I;16777215])] ))))@chance=0.7@luck=1
 
 / ------ Somewhat Destructive Drops ------
 
 / Spider Web
-/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=web),impact=["type=command,ID=\"fill ~ ~ ~ ~ ~1 ~ web 0 keep\""])@luck=1
+/type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=cobweb),impact=["type=fill, ID=cobweb, size=(1,#rand(1,2),1)"])@luck=1
 
 / Lava
 /type=entity,ID=lucky:lucky_projectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lava_bucket),trail=(frequency=0.5,drops=["type=particle,ID=lava"]),impact=["group(type=command,ID=\"fill ~-2 ~-1 ~-2 ~2 ~ ~2 flowing_lava 8 keep\")"])@luck=-1
